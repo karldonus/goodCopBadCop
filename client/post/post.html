@@ -1,0 +1,14 @@
+<template name="post">
+	<div class="row">
+		<div class="well well-large">
+			<label for="posttext">Report Police Activity</label>
+			<input placeholder="What are the cops doing in your neighborhood?" class="input-xxlarge posttext" type="text" name="posttext" value="" id="posttext">
+		</div>
+	</div>
+	<div class="row">
+		<ul class="unstyled" id="postList">
+			{{>trend}}
+
+		</ul>
+	</div>
+</template>

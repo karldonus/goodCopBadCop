@@ -1,0 +1,13 @@
+
+<template name="splash">
+	{{#if currentUser}}
+		{{>navigation}}
+	{{/if}}
+		<div class="container">
+			<div class="hero-unit">
+				<h1>Welcome to GCBC HQ</h1>
+				<p>"Publicity is justly commended as a remedy for social and industrial diseases. Sunlight is said to be the best of disinfectants; electric light the most efficient policeman." - Justice Brandeis</p>
+				<p class="login">{{>loginButtons}}</p>
+			</div>
+		</div>
+</template>

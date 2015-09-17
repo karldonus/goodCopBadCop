@@ -1,0 +1,17 @@
+p.commentText{
+  margin-left:3em;
+  font-size: 13pt;
+}
+p.commentUser{
+  margin-left:4em;
+}
+h4 {
+  display: inline-block;
+}
+.votebtn {
+  margin: 1em;
+}
+
+.postText {
+  color: white;
+}

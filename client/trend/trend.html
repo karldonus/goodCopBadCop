@@ -1,0 +1,41 @@
+<template name="trend">
+  <div class="media">
+    <a href="#" class="pull-left">
+      <img src="colbert.jpg" alt="media obj" class="media-object img-rounded" width="60px">
+    </a>
+    <div class="media-body">
+      <h6>Stephen T. Colbert</h6>
+      <span class="span12 postText">I disagree with everything</span>
+      <div class="media">
+        <span class="span6">
+          <h4>
+            <a class="votebtn muted"><i class="fa fa-thumbs-up"></i></a>
+          </h4>
+            {{#if upCount}}
+              <span class="badge badge-success">{{upCount}} Up Votes</span>
+            {{/if}}
+
+          <h4>
+            <a class="votebtn muted"><i class="fa fa-thumbs-down"></i></a>
+          </h4>
+          {{#if downCount}}
+          <span class="badge badge-warning">{{downCount}} Down Votes</span>
+          {{/if}}
+        </span>
+          <ul class="unstyled">
+            {{>postcomment}}
+          </ul>
+      </div>
+    </div>
+  </div>
+</template>
+<template name="postcomment">
+      <li class="well">
+        <a href="/user" class="pull-left">
+            <img class="img-rounded" src="stewart.jpg" width="40px" alt="{{owner}} img">
+        </a>
+        <p class="muted commentUser">Jon Stewart</p>
+        <p class="muted commentText">Uh...Stephen, you're the first to post, what are you disagreeing with?</p>
+      </li>
+
+</template>
