@@ -1,14 +1,48 @@
 <template name="post">
-	<div class="row">
-		<div class="well well-large">
-			<label for="posttext">Report Police Activity</label>
-			<input placeholder="What are the cops doing in your neighborhood?" class="input-xxlarge posttext" type="text" name="posttext" value="" id="posttext">
-		</div>
-	</div>
-	<div class="row">
-		<ul class="unstyled" id="postList">
-			{{>trend}}
+  <div class="media">
+    <a href="#" class="pull-left">
+      <img src="{{owner}}.jpg" alt="media obj" class="media-object img-rounded" width="60px">
+    </a>
+    <div class="media-body">
+      <h6>{{owner}}</h6>
 
-		</ul>
-	</div>
+      <span class="span12 postText">  <p>{{text}}</p><p class="delete">(X) Remove</p></span>
+
+      <div class="media">
+        <span class="span12">
+          <h4>
+            <a class="votebtn muted"><i class="fa fa-thumbs-up"></i></a>
+          </h4>
+            {{#if upcount}}
+              <span class="badge badge-success">{{upcount}} Up Votes</span>
+            {{/if}}
+
+          <h4>
+            <a class="votebtn muted"><i class="fa fa-thumbs-down"></i></a>
+          </h4>
+          {{#if downcount}}
+          <span class="badge badge-warning">{{downcount}} Down Votes</span>
+          {{/if}}
+        </span>
+
+          <ul class="unstyled">
+            {{#each postComments}}
+            {{>postcomment}}
+            {{/each}}
+          </ul>
+          <input type="text" name="comment" value="" placeholder="What do you think?" class="comment input-xxlarge">
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="postcomment">
+      <li class="well">
+        <a href="/user" class="pull-left">
+            <img class="img-rounded" src="{{owner}}.jpg" width="40px" alt="{{owner}} img">
+        </a>
+        <p class="muted commentUser">{{owner}}</p>
+        <p class="muted commentText">{{text}} <p class="delete">(X) Remove</p></p>
+      </li>
+
 </template>
