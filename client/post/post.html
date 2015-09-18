@@ -6,7 +6,9 @@
     <div class="media-body">
       <h6>{{owner}}</h6>
 
-      <span class="span12 postText">  <p>{{text}}</p><p class="delete">(X) Remove</p></span>
+      <span class="span12 postText">  <p>{{text}}</p>
+        <button class="btn btn-warning btn-sm">Delete</button>
+      </span>
 
       <div class="media">
         <span class="span12">
@@ -42,7 +44,7 @@
             <img class="img-rounded" src="{{owner}}.jpg" width="40px" alt="{{owner}} img">
         </a>
         <p class="muted commentUser">{{owner}}</p>
-        <p class="muted commentText">{{text}} <p class="delete">(X) Remove</p></p>
+        <p class="muted commentText">{{text}} <button class="btn btn-warning btn-sm">Delete</button></p>
       </li>
 
 </template>
