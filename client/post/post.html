@@ -13,17 +13,17 @@
       <div class="media">
         <span class="span12">
           <h4>
-            <a class="votebtn muted"><i class="fa fa-thumbs-up"></i></a>
+            <a class="votebtn upVote muted"><i class="fa fa-thumbs-up"></i></a>
           </h4>
-            {{#if upcount}}
-              <span class="badge badge-success">{{upcount}} Up Votes</span>
+            {{#if upCount}}
+              <span class="badge badge-success">{{upCount}} Up Votes</span>
             {{/if}}
 
           <h4>
-            <a class="votebtn muted"><i class="fa fa-thumbs-down"></i></a>
+            <a class="votebtn downVote muted"><i class="fa fa-thumbs-down"></i></a>
           </h4>
-          {{#if downcount}}
-          <span class="badge badge-warning">{{downcount}} Down Votes</span>
+          {{#if downCount}}
+          <span class="badge badge-warning">{{downCount}} Down Votes</span>
           {{/if}}
         </span>
 
