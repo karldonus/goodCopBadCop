@@ -12,3 +12,4 @@ jquery
 iron:router
 fortawesome:fontawesome
 accounts-base
+mdg:geolocation

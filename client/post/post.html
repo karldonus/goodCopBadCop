@@ -5,6 +5,9 @@
     </a>
     <div class="media-body">
       <h6>{{owner}}</h6>
+      {{#if lat}}
+      <h6>@ lat:{{lat}}/long:{{long}}</h6>
+      {{/if}}
 
       <span class="span12 postText">  <p>{{text}}</p>
         <button class="btn btn-warning btn-sm delete">Delete</button>

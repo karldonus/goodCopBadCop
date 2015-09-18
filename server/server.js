@@ -21,7 +21,9 @@ if(Meteor.isServer){
           text: options.text,
           owner: Meteor.userId(),
           date: new Date(),
-          parent: options.parent
+          parent: options.parent,
+          lat: options.lat,
+          long: options.long
         };
 
       Posts.insert(post);
